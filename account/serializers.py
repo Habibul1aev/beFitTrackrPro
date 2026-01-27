@@ -1,3 +1,5 @@
+import uuid
+
 from django.contrib.auth.hashers import make_password
 from rest_framework import serializers
 from account.models import User
@@ -40,5 +42,7 @@ class RegisterSerializers(serializers.ModelSerializer):
         password = validated_data.pop('password1')
         validated_data.pop('password2')
         validated_data['password'] = make_password(password)
+        validated_data['username'] = f'user_{uuid.uuid4().hex[:6]}'
+        validated_data['avatar'] = '/avatars/stiker2.webp'
 
         return super().create(validated_data)
