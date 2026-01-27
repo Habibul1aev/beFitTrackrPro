@@ -87,10 +87,12 @@ class Nutrition(TimeStampAbstractModel):
 class PhotoAI(TimeStampAbstractModel):
     class Meta:
         verbose_name = 'Изоброжение ИИ'
-        verbose_name_plural = 'Изоюрожения ИИ'
+        verbose_name_plural = 'Изоброжения ИИ'
 
+    user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE)
     image = models.ImageField('Изоброжение', upload_to='food_photo_ai')
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
+
     def __str__(self):
-        return f'{self.pk-1} - {str(self.image)}'
+        return f'{self.pk-1}  {str(self.image)}'
