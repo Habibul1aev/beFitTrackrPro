@@ -1,8 +1,9 @@
 from django.contrib.auth import authenticate
 from django.shortcuts import render
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.response import Response
 from rest_framework import generics, viewsets, status
-from rest_framework.permissions import IsAdminUser
+from rest_framework.permissions import IsAdminUser, IsAuthenticated
 from rest_framework.authtoken.models import Token
 from rest_framework.utils.representation import serializer_repr
 
@@ -10,15 +11,22 @@ from account.models import User
 from account.pagination import AccountPagination
 from account.serializers import AccountUserSerializer, LoginSerializer, RegisterSerializers
 from rest_framework.generics import GenericAPIView
-
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
     serializer_class = AccountUserSerializer
     # permission_classes = (IsAdminUser,)
-    pagination_class = AccountPagination
+    # pagination_class = AccountPagination
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
+    # http_method_names = ['get']
+
+    def get_queryset(self):
+        return User.objects.filter(id=self.request.user.id)
 
 
+@method_decorator(csrf_exempt, name='dispatch')
 class LoginApi(GenericAPIView):
 
     serializer_class = LoginSerializer

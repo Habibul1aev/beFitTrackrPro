@@ -21,8 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/drf-auth/', include('rest_framework.urls')),  # login logout
 
-    path('api/v1/auth/', include('djoser.urls')),  # users, set_password, me,
-    path('api/v1/auth/', include('djoser.urls.authtoken')),  # drf token
+    # path('api/v1/auth/', include('djoser.urls')),  # users, set_password, me,
+    # path('api/v1/auth/', include('djoser.urls.authtoken')),  # drf token
 
     path('api/v1/workouts/', include('workout.urls')),
     path('api/v1/nutritions/', include('nutrition.urls')),

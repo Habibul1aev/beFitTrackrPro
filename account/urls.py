@@ -4,7 +4,7 @@ from account import views
 from account.views import LoginApi, RegisterApi
 
 router = routers.DefaultRouter()
-router.register('account', views.UserViewSet)
+router.register('account', views.UserViewSet, basename='account')
 
 urlpatterns = [
     path('', include(router.urls)),

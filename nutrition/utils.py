@@ -3,14 +3,6 @@ from google.genai import types
 import requests
 from django.conf import settings
 
-# client = genai.Client(api_key='AIzaSyDmQypBTL1D0-Nds7qzUyywIKl1mP9n2IE')
-#
-# response = client.models.generate_content(
-#     model="gemini-3-flash-preview",
-#     contents="How does AI work?"
-# )
-# print(response.text)
-
 prompt = '''
 Определи блюдо по фото и верни ТОЛЬКО JSON:
 
@@ -29,18 +21,44 @@ prompt = '''
 Никакого текста вне JSON.
 '''
 
-image_path = "https://goo.gle/instrument-img"
-image_bytes = requests.get(image_path).content
-image = types.Part.from_bytes(
-  data=image_bytes, mime_type="image/jpeg"
-)
 
-client = genai.Client(api_key=settings.GEMINI_API_KEY)
+def analysis_photo(image_path):
+    with open(image_path, "rb") as f:
+        image_bytes = f.read()
 
-response = client.models.generate_content(
-    model="gemini-3-flash-preview",
-    contents=[prompt, image],
-)
+    image = types.Part.from_bytes(
+        data=image_bytes, mime_type="image/jpeg"
+    )
 
-print(response.text)
+    client = genai.Client(api_key='AIzaSyAoW-rEn29ag8TTJo18nYCFz6agAgx1L4s')
 
+    response = client.models.generate_content(
+        model="gemini-3-flash-preview",
+        contents=[prompt, image],
+    )
+
+    return response.text
+
+# with open('/home/nikto/Pictures/images/F1mVIz17019294837018_l.jpg', "rb") as f:
+#     image_bytes = f.read()
+#
+# image = types.Part.from_bytes(
+#     data=image_bytes, mime_type="image/jpeg"
+# )
+#
+# client = genai.Client(api_key='AIzaSyAoW-rEn29ag8TTJo18nYCFz6agAgx1L4s')
+#
+# response = client.models.generate_content(
+#     model="gemini-3-flash-preview",
+#     contents=[prompt, image],
+# )
+#
+# print(response.text)
+
+# client = genai.Client(api_key='AIzaSyDmQypBTL1D0-Nds7qzUyywIKl1mP9n2IE')
+#
+# response = client.models.generate_content(
+#     model="gemini-3-flash-preview",
+#     contents="How does AI work?"
+# )
+# print(response.text)

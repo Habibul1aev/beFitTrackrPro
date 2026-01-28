@@ -26,4 +26,10 @@ class NutritionSerializer(serializers.ModelSerializer):
 class PhotoAISerializer(serializers.ModelSerializer):
     class Meta:
         model = PhotoAI
-        fields = '__all__'
+        fields = ('id', 'image', 'ai_result', 'created_at', )
+        read_only_fields = ('id', 'ai_result', 'created_at', )
+
+    def validate_image(self, image):
+        if image.size > 5 * 1024 * 1024:
+            raise serializers.ValidationError("Максимум 5MB")
+        return image

@@ -92,7 +92,7 @@ class PhotoAI(TimeStampAbstractModel):
     user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE)
     image = models.ImageField('Изоброжение', upload_to='food_photo_ai')
     uploaded_at = models.DateTimeField(auto_now_add=True)
-
+    ai_result = models.JSONField(null=True, blank=True)
 
     def __str__(self):
         return f'{self.pk-1}  {str(self.image)}'
