@@ -2,7 +2,7 @@ from pathlib import Path
 
 from decouple import config
 import os
-
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -92,15 +92,18 @@ CORS_ALLOW_CREDENTIALS = True
 
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('POSTGRES_DB'),
-        'USER': config('POSTGRES_USER'),
-        'PASSWORD': config('POSTGRES_PASSWORD'),
-        'HOST': config('POSTGRES_HOST', 'localhost'),
-        'PORT': config('POSTGRES_PORT', 5432),
-        'ATOMIC_REQUESTS': True,
-    }
+    'default': dj_database_url.config(
+            default=os.environ.get('DATABASE_URL')
+    )
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': config('POSTGRES_DB'),
+    #     'USER': config('POSTGRES_USER'),
+    #     'PASSWORD': config('POSTGRES_PASSWORD'),
+    #     'HOST': config('POSTGRES_HOST', 'localhost'),
+    #     'PORT': config('POSTGRES_PORT', 5432),
+    #     'ATOMIC_REQUESTS': True,
+    # }
 }
 
 
