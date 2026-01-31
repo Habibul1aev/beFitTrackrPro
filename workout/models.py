@@ -23,7 +23,7 @@ class Workout(TimeStampAbstractModel):
     ]
 
     title = models.CharField('Название', max_length=50)
-    difficulty = models.CharField('Сложность', choices=DIFFICULTY_CHOICES, default='biginner')
+    difficulty = models.CharField('Сложность', choices=DIFFICULTY_CHOICES, max_length=20, default='biginner')
     images = models.ImageField('Изоброжение', upload_to='workout_images')
     exercises = models.ManyToManyField(
         'Exercise',
@@ -79,10 +79,10 @@ class Exercise(models.Model):
     name = models.CharField('Название', max_length=50)
     video = models.FileField('Видео', upload_to='videos/', blank=True, null=True)
     description = models.TextField('Описание', max_length=150)
-    repetition = models.DecimalField('Повторение', max_digits=1, decimal_places=0, default=1)
-    time = models.PositiveIntegerField('Длительность (сек.)', help_text='Укажите длительность в секундах', default=15)
+    repetition = models.DecimalField('Повторение', max_digits=1, decimal_places=0, default=3)
+    time = models.PositiveIntegerField('Длительность (сек.)', help_text='Укажите длительность в секундах', default=20)
     cal = models.PositiveIntegerField("Калории", help_text="Сжигаемовый калории",
-        validators=[MinValueValidator(1), MaxValueValidator(200)], default=15
+        validators=[MinValueValidator(1), MaxValueValidator(200)], default=20
     )
 
     def __str__(self):

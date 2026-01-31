@@ -1,0 +1,272 @@
+[
+  {
+    "model": "workout.workout",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-01-31T07:41:05.982Z",
+      "updated_at": "2026-01-31T07:41:05.982Z",
+      "title": "Тренировка для пресса",
+      "difficulty": "beginner",
+      "images": "workout_images/0eb32af4399d64304f4e69cd843eff4970451926_ctkYHO5.jpg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 3,
+    "fields": {
+      "created_at": "2026-01-31T07:48:32.315Z",
+      "updated_at": "2026-01-31T07:53:28.449Z",
+      "title": "Тренировка для ног",
+      "difficulty": "beginner",
+      "images": "workout_images/43bf59d62dfd20977601e8f5b0f3eba17389e247.jpg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 4,
+    "fields": {
+      "created_at": "2026-01-31T07:49:06.427Z",
+      "updated_at": "2026-01-31T07:52:59.566Z",
+      "title": "Тренировка для ног",
+      "difficulty": "intermediate",
+      "images": "workout_images/34b2f819890f228b0e719354824e2052b9a9ebd8.jpg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 5,
+    "fields": {
+      "created_at": "2026-01-31T07:49:29.559Z",
+      "updated_at": "2026-01-31T07:49:29.559Z",
+      "title": "Тренировка для ног",
+      "difficulty": "advanced",
+      "images": "workout_images/3adeb38a3bb85ec322e1e8d7c5bacca799e0877c.jpg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 6,
+    "fields": {
+      "created_at": "2026-01-31T07:50:27.552Z",
+      "updated_at": "2026-01-31T07:50:27.552Z",
+      "title": "Тренировка для пресса",
+      "difficulty": "intermediate",
+      "images": "workout_images/bfd7c9d3a22212d0a2e49ff5f8b82ff27bb19d3e.jpg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 7,
+    "fields": {
+      "created_at": "2026-01-31T07:55:07.971Z",
+      "updated_at": "2026-01-31T07:55:07.971Z",
+      "title": "Тренировка для пресса",
+      "difficulty": "advanced",
+      "images": "workout_images/images_.jpeg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 8,
+    "fields": {
+      "created_at": "2026-01-31T07:57:11.560Z",
+      "updated_at": "2026-01-31T07:57:11.560Z",
+      "title": "Тренировка спины",
+      "difficulty": "beginner",
+      "images": "workout_images/f7cc1e06406f9028a43a884cf0b3674bbcee4840.jpg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 9,
+    "fields": {
+      "created_at": "2026-01-31T07:57:38.634Z",
+      "updated_at": "2026-01-31T07:57:38.634Z",
+      "title": "Тренировка спины",
+      "difficulty": "intermediate",
+      "images": "workout_images/0cd487ac0410f4a0b3c79a8b4a6f93bd5e3af8df.jpg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 10,
+    "fields": {
+      "created_at": "2026-01-31T07:58:07.339Z",
+      "updated_at": "2026-01-31T07:58:07.339Z",
+      "title": "Тренировка спины",
+      "difficulty": "advanced",
+      "images": "workout_images/3779a1b47f7f55b58209562aba99aa86b6260520.jpg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 11,
+    "fields": {
+      "created_at": "2026-01-31T07:59:18.000Z",
+      "updated_at": "2026-01-31T08:03:12.673Z",
+      "title": "Кардио для тела",
+      "difficulty": "beginner",
+      "images": "workout_images/4a6ac81c7b19c5e54dddc374abbbb41206a6ce4a_yDjRfGs.jpg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 12,
+    "fields": {
+      "created_at": "2026-01-31T08:00:14.301Z",
+      "updated_at": "2026-01-31T08:03:04.375Z",
+      "title": "Кардио для тела",
+      "difficulty": "intermediate",
+      "images": "workout_images/05ab19a4a4e6724ef363c68e217d36123f61479a_GAunkTj.jpg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 13,
+    "fields": {
+      "created_at": "2026-01-31T08:00:36.836Z",
+      "updated_at": "2026-01-31T08:02:57.206Z",
+      "title": "Кардио для тела",
+      "difficulty": "advanced",
+      "images": "workout_images/f598421879abca63b406b9c733eab9dbdfcf5703.jpg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 14,
+    "fields": {
+      "created_at": "2026-01-31T08:01:33.544Z",
+      "updated_at": "2026-01-31T08:02:43.848Z",
+      "title": "Тренировка для рук",
+      "difficulty": "beginner",
+      "images": "workout_images/7b13abf54adc73b4b4c6ca2dbd3f04b15dcb5492.jpg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 15,
+    "fields": {
+      "created_at": "2026-01-31T08:02:00.367Z",
+      "updated_at": "2026-01-31T08:02:35.353Z",
+      "title": "Тренировка для рук",
+      "difficulty": "intermediate",
+      "images": "workout_images/9fcab50489eb13e7b7fb52249650afc854743821.jpg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 16,
+    "fields": {
+      "created_at": "2026-01-31T08:02:29.347Z",
+      "updated_at": "2026-01-31T08:02:29.347Z",
+      "title": "Тренировка для рук",
+      "difficulty": "advanced",
+      "images": "workout_images/589030d0af0f864c1a61d22de1cad4f59fd9fda2.jpg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 17,
+    "fields": {
+      "created_at": "2026-01-31T08:08:12.264Z",
+      "updated_at": "2026-01-31T08:08:12.264Z",
+      "title": "Тренировка для груди",
+      "difficulty": "beginner",
+      "images": "workout_images/pexels-andrea-piacquadio-3839310-1.jpg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 18,
+    "fields": {
+      "created_at": "2026-01-31T08:08:29.034Z",
+      "updated_at": "2026-01-31T08:08:29.034Z",
+      "title": "Тренировка для груди",
+      "difficulty": "intermediate",
+      "images": "workout_images/images.jpeg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  },
+  {
+    "model": "workout.workout",
+    "pk": 19,
+    "fields": {
+      "created_at": "2026-01-31T08:08:43.614Z",
+      "updated_at": "2026-01-31T08:08:43.614Z",
+      "title": "Тренировка для груди",
+      "difficulty": "advanced",
+      "images": "workout_images/download.jpeg",
+      "is_publish": true,
+      "user": 1,
+      "exercises": [],
+      "favorites": []
+    }
+  }
+]

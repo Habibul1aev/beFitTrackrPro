@@ -1,7 +1,8 @@
 from google import genai
 from google.genai import types
-import requests
-from django.conf import settings
+import json
+import re
+
 
 prompt = '''
 Определи блюдо по фото и верни ТОЛЬКО JSON:
@@ -30,14 +31,25 @@ def analysis_photo(image_path):
         data=image_bytes, mime_type="image/jpeg"
     )
 
-    client = genai.Client(api_key='AIzaSyAoW-rEn29ag8TTJo18nYCFz6agAgx1L4s')
+    client = genai.Client(api_key='AIzaSyBFLQj7ZF7RzGAfSHE0GmtnZWQeamuaXvA')
 
     response = client.models.generate_content(
         model="gemini-3-flash-preview",
         contents=[prompt, image],
     )
 
-    return response.text
+    return parse_ai_json(response.text)
+
+
+def parse_ai_json(ai_text):
+    cleaned = re.sub(r"```(?:json)?|```", "", ai_text).strip()
+
+    try:
+        data = json.loads(cleaned)
+    except json.JSONDecodeError:
+        raise ValueError("Gemini вернул невалидный JSON")
+    return data
+
 
 # with open('/home/nikto/Pictures/images/F1mVIz17019294837018_l.jpg', "rb") as f:
 #     image_bytes = f.read()

@@ -46,7 +46,7 @@ class User(AbstractUser):
     avatar = ResizedImageField('Аватарка', size=[500, 500], crop=['middle', 'center'],
                                upload_to='avatars/', force_format='WEBP', quality=90,
                                null=True, blank=True)
-    gender = models.CharField('Пол', choices=GENDER_CHOICES, default='male')
+    gender = models.CharField('Пол', choices=GENDER_CHOICES, max_length=20, default='male')
     age = models.PositiveIntegerField('Возраст', blank=True, null=True, validators=[MinValueValidator(16, "Минимальный возраст: 14 лет"),
             MaxValueValidator(100, "Пожалуйста, проверьте возраст")]
     )
@@ -58,8 +58,8 @@ class User(AbstractUser):
             MaxValueValidator(300, "Максимальный рост: 300 см")
         ]
     )
-    goal = models.CharField('Цель', choices=GOAL_CHOICES, default='lose weight')
-    physical_activity = models.CharField('Физицеский уровень', choices=PHYSICAL_ACTIVITY_CHOICES, default='beginner')
+    goal = models.CharField('Цель', choices=GOAL_CHOICES, max_length=20, default='lose weight')
+    physical_activity = models.CharField('Физицеский уровень', max_length=20, choices=PHYSICAL_ACTIVITY_CHOICES, default='beginner')
     weight_value = models.DecimalField('Вес', blank=True, null=True,
        max_digits=3,
        decimal_places=1,

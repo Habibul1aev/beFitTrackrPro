@@ -11,7 +11,12 @@ class WorkoutAdmin(admin.ModelAdmin):
     filter_horizontal = ('exercises', )
     list_filter = ('is_publish', 'created_at', 'difficulty', 'favorites',)
     search_fields = ('title', 'difficulty',)
-    readonly_fields = ('created_at', 'updated_at', 'get_big_images',)
+    readonly_fields = ('created_at', 'updated_at', 'get_big_images', 'user', )
+
+    def save_model(self, request, obj, form, change):
+        if not obj.pk:
+            obj.user = request.user
+        super().save_model(request, obj, form, change)
 
     @admin.display(description='Изображение')
     def get_images(self, item):
@@ -27,6 +32,9 @@ class WorkoutAdmin(admin.ModelAdmin):
                 f'<img src="{item.images.url}" alt="{item.title}" width="100%" />')
         return '-'
 
+    def has_add_permission(self, request):
+        return request.user.is_superuser
+
 @admin.register(Exercise)
 class ExerciseAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'repetition', 'exersice_cal', 'exersice_time', 'connection')
@@ -39,4 +47,7 @@ class ExerciseAdmin(admin.ModelAdmin):
         for workout in obj.workouts.all():
             l.append(workout.id)
         return l
+
+    def has_add_permission(self, request):
+        return request.user.is_superuser
 

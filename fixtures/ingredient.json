@@ -1,0 +1,219 @@
+[
+  {
+    "model": "nutrition.ingredient",
+    "pk": 1,
+    "fields": {
+      "name": "черная редька крупная"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 2,
+    "fields": {
+      "name": "небольшая кисть красного винограда"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 3,
+    "fields": {
+      "name": "киноа"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 4,
+    "fields": {
+      "name": "лук красный"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 5,
+    "fields": {
+      "name": "оливковое масло"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 6,
+    "fields": {
+      "name": "лимонный сок"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 7,
+    "fields": {
+      "name": "тертая цедра лимона"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 8,
+    "fields": {
+      "name": "Малина"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 9,
+    "fields": {
+      "name": "Кефир"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 10,
+    "fields": {
+      "name": "Молоко"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 11,
+    "fields": {
+      "name": "Хлопья овсяные"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 12,
+    "fields": {
+      "name": "Мята свежая"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 13,
+    "fields": {
+      "name": "Рыба"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 14,
+    "fields": {
+      "name": "Перец болгарский"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 15,
+    "fields": {
+      "name": "Брокколи"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 16,
+    "fields": {
+      "name": "Лук красный"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 17,
+    "fields": {
+      "name": "Сельдерей"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 18,
+    "fields": {
+      "name": "Сок лимона"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 19,
+    "fields": {
+      "name": "Хлеб белый"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 20,
+    "fields": {
+      "name": "Яйцо"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 21,
+    "fields": {
+      "name": "Сыр плавленый"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 22,
+    "fields": {
+      "name": "Крупа овсяная"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 23,
+    "fields": {
+      "name": "Масло растительное"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 24,
+    "fields": {
+      "name": "Вода"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 25,
+    "fields": {
+      "name": "Клубника"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 26,
+    "fields": {
+      "name": "Лаваш тонкий"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 27,
+    "fields": {
+      "name": "Куриные ножки"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 28,
+    "fields": {
+      "name": "Морковь по-корейски"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 29,
+    "fields": {
+      "name": "Капуста пекинская"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 30,
+    "fields": {
+      "name": "Огурцы"
+    }
+  },
+  {
+    "model": "nutrition.ingredient",
+    "pk": 31,
+    "fields": {
+      "name": "Помидоры"
+    }
+  }
+]
